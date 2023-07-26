@@ -26,8 +26,8 @@ jobs:
         - bash
         - -c
         - >-
-          cd /inputs/mnist-sample && pip install pandas && pip install pyarrow && python test.py
-      image: tensorflow/tensorflow:1.15.5-py3
+          cd /inputs/mnist-sample && python test.py
+      image: registry.digitalocean.com/bullit-digital/bergnet-feature-store:main_13
     needs:
       - CloneRepo
     inputs:
