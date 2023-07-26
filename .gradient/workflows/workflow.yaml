@@ -26,9 +26,13 @@ jobs:
         - bash
         - -c
         - >-
-          cd /inputs/mnist-sample && python mnist.py
+          cd /inputs/mnist-sample && python test.py
       image: tensorflow/tensorflow:1.15.5-py3
     needs:
       - CloneRepo
     inputs:
       mnist-sample: CloneRepo.outputs.mnist-sample
+      test-data:
+        type: dataset
+        with:
+          ref: dsefhhkkncfltk0
