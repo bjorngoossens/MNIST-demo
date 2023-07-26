@@ -6,7 +6,7 @@ on:
 jobs:
   CloneRepo:
     resources:
-      instance-type: C3
+      instance-type: C4
     uses: git-checkout@v1
     with:
       # url: https://github.com/gradient-ai/mnist-sample.git
@@ -17,7 +17,7 @@ jobs:
         type: volume
   TrainModel:
     resources:
-      instance-type: C3
+      instance-type: C4
     env:
       PS_MODEL_PATH: /my-trained-model
     uses: container@v1
