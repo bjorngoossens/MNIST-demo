@@ -28,7 +28,7 @@ jobs:
         - >-
           cd /inputs/mnist-sample && python test.py
       image: registry.digitalocean.com/bullit-digital/bergnet-feature-store:main_13
-      containerRegistry: bullit-digital
+    containerRegistry: bullit-digital
     needs:
       - CloneRepo
     inputs:
