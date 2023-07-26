@@ -26,7 +26,7 @@ jobs:
         - bash
         - -c
         - >-
-          cd /inputs/mnist-sample && pip install pandas && pip install fastparquet && python test.py
+          cd /inputs/mnist-sample && pip install pandas && pip install pyarrow && python test.py
       image: tensorflow/tensorflow:1.15.5-py3
     needs:
       - CloneRepo
